@@ -1,8 +1,10 @@
 .main {
-    color: red;
     display: flex;
     position: relative;
-    transform: translateZ(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .svg1 {
@@ -11,5 +13,6 @@
 
 .svg2 {
     position: absolute;
+    z-index: -1;
     transform-origin: 304px 247px;
 }
