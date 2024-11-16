@@ -2,7 +2,10 @@
     color: red;
     display: flex;
     position: relative;
-    transform: translateZ(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .svg1 {
