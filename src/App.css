@@ -7,11 +7,9 @@
 
 .svg1 {
     position: absolute;
-    z-index: 1;
 }
 
 .svg2 {
     position: absolute;
-    z-index: 2;
     transform-origin: 304px 247px;
 }
