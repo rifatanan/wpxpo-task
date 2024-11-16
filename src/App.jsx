@@ -5,23 +5,19 @@ import Svg2 from '../src/assets/Svg2'
 import './App.css'
 
 function App() {
-	const [rotation, setRotation] = useState(0);
-	const [xy, setXy] = useState(0);
-  const handleMouseMove = (e) => {
-    const windowWidth = window.innerWidth;
+		const [rotation, setRotation] = useState(0);
+		const handleMouseMove = (e) => {
+		const windowWidth = window.innerWidth;
 
-    // Calculate rotation angle based on mouse position
-    const mouseX = e.clientX;
-	const mouseY = e.clientY;
-	setXy(mouseX+" "+mouseY);
-    const rotationAngle = (mouseX / windowWidth) * 90; // Scale from 0 to 45 degrees
-    setRotation(rotationAngle);
-  };
+		const mouseX = e.clientX;
+		const rotationAngle = (mouseX / windowWidth) * 90;
+		setRotation(rotationAngle);
+  	};
 
-  useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+	useEffect(() => {
+		window.addEventListener("mousemove", handleMouseMove);
+		return () => window.removeEventListener("mousemove", handleMouseMove);
+	}, []);
 
 	return (
 		<div className='main'>
@@ -32,9 +28,8 @@ function App() {
 				style={{
 					transform: `rotate(${rotation}deg)`,
 				}}
-				>{xy}
-				<Svg2>
-				</Svg2>
+				>
+				<Svg2 />
 			</div>
 		</div>
 	)
